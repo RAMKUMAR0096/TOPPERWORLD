@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="icon" href="assets/images/rk-cut.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/cart.js"></script>
+</head>
+<body>
+         <!-- Navbar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/RK_LOGO-neww.png" alt="Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Product</a></li>
+                <li><a href="category.html">Category</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <a href="search.html">
+                        <button type="submit">Search</button>
+                    </a>
+                </div>
+                <div class="cart-icon">
+                    <a href="cart.html" style="color: aliceblue;">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-count">2</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Cart Page -->
+    <section class="cart" id="cart">
+        <div class="container">
+            <div class="section_title">
+                <h1 style="text-decoration: underline;">Cart</h1>
+            </div>
+            <div class="row cart-content">
+                <!--Grid column-->
+                <div class="col-md-8 cart-items">
+                    <!-- Card -->
+                    <div class="cart-item">
+                        <div class="cart-header">
+                            <h5>Cart (<span>2</span> items)</h5>
+                        </div>
+                        <div class="cart-row">
+                            <div class="cart-img">
+                                <img src="assets/images/products/airpodes/boAt Airdopes 111 1.webp" alt="Sample">
+                            </div>
+                            <div class="cart-details">
+                                <div class="cart-info">
+                                    <div>
+                                        <h5>Airpode</h5>
+                                        <p>Airpode - boat</p>
+                                        <p>Color: white</p>
+                                        <p>Size: free</p>
+                                    </div>
+                                    <div class="cart-quantity">
+                                        <button onclick="decreaseQuantity(this)">-</button>
+                                        <input class="quantity" min="0" max="10" name="quantity" value="1" type="number">
+                                        <button onclick="increaseQuantity(this)">+</button>
+                                        <small>(Note, 1 piece)</small>
+                                    </div>
+                                </div>
+                                <div class="cart-actions">
+                                    <a href="javascript:;" class="remove-item"><i class="fas fa-trash-alt"></i> Remove item</a>
+                                    <p><strong>₹17.99</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="cart-row">
+                            <div class="cart-img">
+                                <img src="assets/images/products/camera/Canon EOS 1500D 24.1 Digital SLR Camera (Black) with EF S18-55 is II Lens 2.jpg" alt="Sample">
+                            </div>
+                            <div class="cart-details">
+                                <div class="cart-info">
+                                    <div>
+                                        <h5>Camera</h5>
+                                        <p>camera - black</p>
+                                        <p>Color: black</p>
+                                        <p>Size: small</p>
+                                    </div>
+                                    <div class="cart-quantity">
+                                        <button onclick="decreaseQuantity(this)">-</button>
+                                        <input class="quantity" min="0" max="10" name="quantity" value="1" type="number">
+                                        <button onclick="increaseQuantity(this)">+</button>
+                                    </div>
+                                </div>
+                                <div class="cart-actions">
+                                    <a href="javascript:;" class="remove-item"><i class="fas fa-trash-alt"></i> Remove item</a>
+                                    <p><strong>₹35.99</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-4 order-summary">
+                    <!-- Card -->
+                    <div>
+                        <h5>Order summary</h5>
+                        <ul>
+                            <li>
+                                <span>Airpodes</span>
+                                <span>x2</span>
+                                <span>₹25.98</span>
+                            </li>
+                            <li>
+                                <span>Camera</span>
+                                <span>x2</span>
+                                <span>₹25.98</span>
+                            </li>
+                            <li class="total-amount">
+                                <div>
+                                    <strong>Total amount</strong>
+                                    <p>(including VAT)</p>
+                                </div>
+                                <span><strong>₹51.96</strong></span>
+                            </li>
+                        </ul>
+                        <a href="checkout.html" class="checkout-button">Go to Checkout</a>
+                    </div>
+                </div>
+                <!--Grid column-->
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer>
+        <div class="fo-container">
+            <div class="fo-row">
+                <div class="single-box">
+                    <a href="about.html">
+                        <img src="assets/images/rk-cut.png" alt="Logo">
+                    </a>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam repellendus sunt praesentium aspernatur iure molestias.</p>
+                    <h3>We Accept</h3>
+                    <div class="card-area">
+                        <i class="fa-brands fa-cc-visa"></i>
+                        <i class="fa-solid fa-credit-card"></i>
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                        <i class="fa-brands fa-cc-paypal"></i>
+                    </div>
+                </div>
+                <div class="single-box">
+                    <h2>Hosting</h2>
+                    <ul>
+                        <li><a href="#">Web Hosting</a></li>
+                        <li><a href="#">Cloud Hosting</a></li>
+                        <li><a href="#">CMS Hosting</a></li>
+                        <li><a href="#">WordPress Hosting</a></li>
+                        <li><a href="#">Email Hosting</a></li>
+                        <li><a href="#">VPS Hosting</a></li>
+                    </ul>
+                </div>
+                <div class="single-box">
+                    <h2>Domain</h2>
+                    <ul>
+                        <li><a href="#">Web Domain</a></li>
+                        <li><a href="#">Cloud Domain</a></li>
+                        <li><a href="#">CMS Domain</a></li>
+                        <li><a href="#">WordPress Domain</a></li>
+                        <li><a href="#">Email Domain</a></li>
+                        <li><a href="#">VPS Domain</a></li>
+                    </ul>
+                </div>
+                <div class="single-box">
+                    <h2>Newsletter</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur doloremque earum similique fugiat nobis. Facere?</p>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Enter your Email ..." required>
+                        <span class="input-group-text"><i class="fa fa-long-arrow-right"></i></span>
+                    </div>
+                    <h2>Follow us on</h2>
+                    <p class="socials">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-dribbble"></i>
+                        <i class="fa-brands fa-pinterest"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <a href="contact.html" style="text-decoration: none; color: #fff;">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Footer -->
+    <div class="foot">
+        <p>&copy; 2024 E-commerce Website. All rights reserved.</p>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn">Top</button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
